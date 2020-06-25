@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UC Davis Lost & Found Search Results</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/user/searchResultsSeeker.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat: 200, 300, 400, 600, 700"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body onload="setupPage()">
+    
+    <div class="img">
+      <img src="/assets/Logo.png" onclick="goToHome()">
+    </div>
+
+    <div id="pgTitle">
+      <h2>
+        Showing results for
+      </h2>
+
+      <div id="resultsFor">
+        <div id="identifiers"></div>
+        
+        <button id="editButton" onclick="editSearch()">
+           Edit Search
+        </button>
+      </div>
+    </div>
+
+    <div id="result-container">
+      <template>
+        <div id="result" class="result">
+          <div id="minimized">
+            <div class="result-title-container-minimized">
+              
+              <div class="column-container">
+                <p class="montserrat" id="minimized-title"></p>
+              </div>
+              <div class="more-button-div">
+                <p class="more-button bold" id="more-button">More</p>
+              </div>
+              
+            </div>
+          </div>
+
+          <div id="result-entry">
+            <div class="result-title-container">
+              <p class="monserrat" id="result-title"></p>
+            </div>
+
+            <div class="result-body-container">
+              <img id="result-img" />
+
+              <div class="result-text-container">
+                <div class="column-container">
+                  <div class="text-column">
+                    <p class="bold column-entry">Category</p>
+                    <p class="bold column-entry">Location</p>
+                    <p class="bold column-entry">Date</p>
+                  </div>
+
+                  <div class="text-column">
+                    <p id="result-category" class="column-entry"></p>
+                    <p id="result-location" class="column-entry"></p>
+                    <p id="result-date" class="column-entry"></p>
+                  </div>
+                </div>
+
+                <p id="result-description">This is the description</p>
+              </div>
+            </div>
+
+            <div class="footer-container">
+              <p class="monserrat bold" id="less-button">Less</p>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <script src="/user/searchResultsSeeker.js"></script>
+  </body>
+</html>
