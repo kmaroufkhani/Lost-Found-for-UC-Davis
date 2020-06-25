@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/user/seeker.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat: 200, 300, 400, 600, 700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="img">
+      <img src="/assets/Logo.png" onclick="goToHome()" />
+    </div>
+
+    
+    <div id="mainContainer2">
+      <div id="searchContainer2">
+        <div id="searchText2">
+          Search for existing items
+        </div>
+        <div id="searchInputBox2">
+          <input id="searchInput2" />
+          <i id="searchIcon2" class="fa fa-search"></i>
+        </div>
+      </div>
+
+      <div id="srchMainBox">
+        <div class="item">
+          <p>Date & Time</p>
+          <div id="dateTimeFlex">
+            <input type="date" id="dateInput-from" />
+            <input type="time" id="timeInput-from" />
+            <p>to</p>
+            <input type="date" id="dateInput-to" />
+            <input type="time" id="timeInput-to" />
+          </div>
+        </div>
+
+        <div class="item">
+          <p>Category</p>
+          <input id="categoryInput-srch" />
+        </div>
+        
+        <div class="item">
+          <p>Location</p>
+          <input id="locationInput2">
+          <div id="map2"></div>
+        </div>
+        
+        <div class="item" id="srchContainer">
+          <button id="srchButton" onclick="searchResultsTimeRange()">
+            Search
+          </button>
+        </div>
+        
+      </div>
+    </div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDynkoXu1l88lEWIJXL28QlC6Y9yZTfPKI&libraries=places&callback=initMap2&libraries=places&v=weekly"
+      defer
+    ></script>
+    <script src="/user/main.js"></script>
+    <script src="/user/seeker.js"></script>
+  </body>
+</html>

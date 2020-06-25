@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main page</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/reset.css" />
+
+    <!--  extra protected stylesheet for this page -->
+    <link rel="stylesheet" href="/user/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat: 200, 300, 400, 600, 700"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="img">
+      <img src="/assets/Logo.png" />
+    </div>
+
+      <div class="finder" >
+        <p>
+          Did you find something?
+        </p>
+
+        <button class="seekerButton" onclick="goToInput()">I'm a finder</button>
+      </div>
+
+      <div class="seeker">
+        <p>Or are you looking for something?</p>
+        <button class="finderButton" onclick="goToSeeker()">I'm a seeker</button>
+    </div>
+    
+    <script src="main.js"></script>
+  </body>
+</html>

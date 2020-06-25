@@ -1,0 +1,128 @@
+/* this file is loaded by index.html and styles the page */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat';
+  line-height: 1.5em;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+#title img {
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  background-color: var(--main-color);
+  font-size: large;
+  padding: 10px;
+}
+
+.RHS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #365c85;
+  width: 50%;
+}
+
+div.smallContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div#title {
+  max-width: auto;
+  padding: 20px;
+}
+
+#loginLink {
+  text-decoration: none;
+  margin: 20px;
+}
+
+button#loginButton {
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px 0 5px;
+  max-width: auto;
+}
+
+#loginButton img {
+  height: 40px;
+  width: 50px;
+  margin: 0;
+}
+
+#errMsg {
+  /* display: none; */
+  color: #FF6347;
+}
+
+
+.LHS {
+  width: 50%;
+  background-image: url('assets/shields.jpg');
+  background-size: 90% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: -140% 0; 
+} 
+
+footer {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid lightgrey;
+}
+
+
+
+
+/******************************************************/
+
+/************* Tablet View ************/
+@media (max-width: 768px) {
+  .LHS {
+    background-position: -140% 0;
+  }
+}
+/* ***************************************************/
+
+/************* Mobile View ************/
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+  .LHS {
+    flex: 1;
+    width: 100%;
+   background-size: 100% 50%;
+  }
+  
+  .RHS {
+    flex: 1;
+    width: 100%;
+  }
+  
+  div#title {
+  max-width: 80%;
+  padding: 20px;
+  }
+}

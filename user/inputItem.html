@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/user/inputItem.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat: 200, 300, 400, 600, 700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="img">
+      <img src="/assets/Logo.png" onclick="goToHome()" />
+    </div>
+
+    <div id="mainContainer">
+      <div id="pgTitle">
+        Input the found item
+      </div>
+
+      <div id="mainBox">
+        <div class="item">
+          <p>Title</p>
+          <input id="titleInput" />
+        </div>
+
+        <div class="item">
+          <p>Category</p>
+          <input id="categoryInput" />
+        </div>
+
+        <div class="item">
+          <p>Description</p>
+          <div id="descriptionInput" contenteditable="true"></div>
+        </div>
+
+        
+        <div class="item">
+          <p>Attach a photo (optional)</p>
+          <div id="imgUploader">
+            
+            
+            <label for="imgUpload">Choose File</label>
+            <form method="post" enctype="multipart/form-data">
+               <input id="imgUpload" type="file" accept="image/*" name="photo"/> 
+            </form> 
+            
+          </div>
+        </div>
+        
+        
+        <div class="item" id="nxtContainer">
+          <button id="nxtButton" onclick="nxtPage()">
+            Next
+          </button>
+        </div>
+      </div>
+
+      <!-- Clicking next will display the following: -->
+      <div id="mainBox2">
+        <div class="item">
+          <p>Date & Time</p>
+          <input type="date" id="dateInput" />
+          <input type="time" id="timeInput" />
+        </div>
+
+        <div class="item">
+          <p>Location</p>
+          <input id="locationInput">
+          <div id="map"></div>
+        </div>
+
+        <div class="item" id="submitContainer">
+          <button id="submitButton" onclick="sendNewItem()">
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <div id="searchContainer">
+        <div id="searchText">
+          Or search for existing items
+        </div>
+        <div id="searchInputBox">
+          <input id="searchInput" onclick="goToSearch()" />
+          <i id="searchIcon" class="fa fa-search"></i>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDynkoXu1l88lEWIJXL28QlC6Y9yZTfPKI&libraries=places&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+    <script src="/user/main.js"></script>
+    <script src="/user/inputItem.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>UCD Lost & Found</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Lost & Found Database for UC Davis" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:200, 300, 400, 600, 700"
+      rel="stylesheet"
+    />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script
+      src="https://cdn.glitch.com/48b1e91a-68a4-4e98-a201-af5f60aad8fa%2Fshields.jpg?v=1590018174239"
+      defer
+    ></script>
+
+    <!-- Google -->
+        <meta
+      name="google-signin-client_id"
+      content="776909033674-san6tu5ehs884creof0lgkskmbl0optp.apps.googleusercontent.com"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+
+  <body onload="checkErr()">
+    <div class="LHS"></div>
+
+    <div class="RHS">
+      <div class="smallContainer">
+        <div id="title">
+          <img src="assets/Logo.png" />
+        </div>
+
+        <a href="auth/google" id="loginLink">
+          <button class="centered" id="loginButton">
+            <img src="/assets/google.jpg" />
+            Login with Google
+          </button>
+        </a>
+        <p id="errMsg">
+          Error: Login with your  UC Davis email account
+        </p>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
